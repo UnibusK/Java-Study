@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바빈과 JSTL</title>
+	</head>
+	<body>
+		<%
+			beans.Student s1=new beans.Student();
+			s1.setName("김우주");
+			s1.setAge("36");
+			s1.setAddress("도봉구");
+			beans.Student s2=new beans.Student();
+			s2.setName("지구");
+			s2.setAge("9개월");
+			s2.setAddress("우주네");
+				
+		%>
+		<%=s1 %><br>
+		<%=s2 %><br>
+		<h1>jsp 액션태그 방식</h1>
+		<jsp:useBean id="s3" class="beans.Student"></jsp:useBean>
+		<jsp:setProperty name="s3" property="name" value="태양"></jsp:setProperty>
+		<jsp:setProperty name="s3" property="age" value="8개월"></jsp:setProperty>
+		<jsp:setProperty name="s3" property="address" value="우주네"></jsp:setProperty>
+		<!-- name.set필드멍("내용"); -->
+		<%=s3 %>
+		
+		<h1>JSTL 방식</h1>
+		<c:set var="s4" value="<%=new beans.Student() %>"</c:set>		
+		<c:set target="%{s4 }" property="name" value="고길동"></c:set>
+		<c:set target="%{s4 }" property="age" value="45"></c:set>
+		<c:set target="%{s4 }" property="address" value="노원구"></c:set>
+	</body>
+</html>

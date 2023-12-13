@@ -1,0 +1,48 @@
+package label;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class ex_cal {
+	public static void main(String[] args) {
+		new CAL();
+	}
+}
+
+class CAL extends Frame{
+	CAL() {
+		setTitle("Calulator");	//제목
+		
+		Label L=new Label("Calulator");
+		
+		
+		Button b1=new Button("1");
+		b1.setBounds(50,50,30,30);
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("1");
+			}
+		});
+		add(b2);
+		Button b2=new Button("1");
+		b1.setBounds(100,50,30,30);
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("1");
+			}
+		});
+		add(b2);
+		
+		
+		setSize(400,400);	//창 크기
+		setLayout(null);	//화면배치 규칙을 무규칙으로
+		setVisible(true); 	//창이 보이도록
+		
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+				System.out.println("종료버튼 눌렸음");
+			}
+		});
+	}
+}

@@ -1,0 +1,11 @@
+package arr;
+
+public class Sample05 {
+	public static void main(String [] args) {
+		System.out.println("<!DOCYPE html>");
+		System.out.println("<html>");
+		System.out.println("<head></head>");
+		System.out.println("<body></body>");
+		System.out.println("</html>");
+	}
+}

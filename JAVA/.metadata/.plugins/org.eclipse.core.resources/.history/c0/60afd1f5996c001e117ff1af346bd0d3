@@ -1,0 +1,24 @@
+package arr;
+
+public class Sample04 {
+	public static  void main(String[] args) {
+		//try-catch(오류타입) : 오류가 발생하더라도 프로그램을 종료하지 않고 다른 부분은 실행되도록 하는 문법
+		//************매우중요!!!!!!!!!!
+		System.out.println("배열을 만듭니다.");
+		try {
+			int[] a=new int[5];
+			a[0] = 10;
+			a[1] = 20;
+			a[2] = 30;
+			a[3] = 40;
+			a[4] = 50;
+			a[5] = 60; // 오류가 나는 지점 (배열 5칸 만들라고 했음)
+		} catch(Exception e) {
+			System.out.println("처리도중 오류가 발생했습니다.");
+			System.out.println("###Sample04.jave::18 김우주###"+e);
+			e.printStackTrace();
+		}
+		System.out.println("배열 처리가 끝났습니다.");
+		
+	}
+}

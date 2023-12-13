@@ -1,0 +1,27 @@
+package str;
+
+import java.io.*;
+import java.util.*;
+
+public class Sample04 {
+	public static void main(String[] args) throws IOException {
+		/*
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("문자열을 입력해주세요.");
+		String msg=br.readLine() ;
+		System.out.println(msg);
+		*/
+		
+		//Scanner sc = new Scanner(System.in);
+		//String data=sc.next();
+		
+		StringBuffer sb = new StringBuffer("기본값");
+		sb.append("추가데이터");
+		System.out.println(sb);
+	}
+}
+
+//StringBuffer : 글자를 추가하거나 더해도 원본을 유지해주는 데이터
+//문자열에 값을 더하거나 빼기 편리하게 고현된 String 객체
+//StringBuffer.append(String) : 문자열 뒤에 다른 문자열을 추가 void
+//

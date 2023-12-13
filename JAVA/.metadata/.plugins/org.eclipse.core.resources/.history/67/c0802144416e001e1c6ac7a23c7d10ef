@@ -1,0 +1,65 @@
+package str;
+
+
+public class Sample03 {
+	public static void main(String[] args) {
+		/*
+		String s1 = new String("안녕하세요."); // 스트링의 실제 모양
+		String s2 = "반갑습니다.";
+		System.out.println(s1);
+		System.out.println(s2);
+		IOT i= new IOT();
+		IOT j = new IOT("두번째");
+		System.out.println(i);
+		System.out.println(j);
+		*/
+		
+		String s = "Hello, JAVA!";
+		char c = s.charAt(1);
+		System.out.println(c);
+		
+		char[] arr = new char[12];
+		for (int i =0; i<arr.length; i++) {
+			arr[i] = s.charAt(i);
+		} // 배열의 String내부 데이터를 입력하는 for문
+		for(int j=0; j<arr.length; j++) {
+			System.out.print(arr[j]);
+		}//저장된 내부 데이터를 출력하는 for문
+		System.out.println();
+		int k=arr.length;
+		int cnt=0;
+		for(int a=k-1; a>=0; a--) {
+			System.out.print(arr[a]);
+		} //거꾸로 출력
+		System.out.println();
+		
+		boolean b=s.startsWith("H");
+		b=s.endsWith("!");
+		b=s.equalsIgnoreCase("hello, java!");
+		System.out.println(b);
+		
+		int i=s.indexOf("o");
+		System.out.println(i);
+	}
+}
+//String은 다른사람이 만들어준 클래스이다.
+//String 객체는 메서드를 가지고 있다.
+//String.charAt(int) : 특정한 하나의 문자를 추출하는 기능, return char
+//String.startsWith(String) : 문자열이 무엇으로 시작하는지 확인 return boolean
+//String.endsWith(String) : 문자열이 무엇으로 끝나는지 확인 return boolean
+//String.equalsIgnoreCase(String) : 대소문자 구별없이 비교 return boolean
+//String.indexOf(문자열) : 해당 문자열이 최초로 등장하는 위치를 확인 return int
+
+/*
+class IOT{
+	public String toString() {
+		return "이부분이 출력";
+	}
+	IOT() {
+
+	}
+	IOT(String s) {
+		
+	}
+}
+*/

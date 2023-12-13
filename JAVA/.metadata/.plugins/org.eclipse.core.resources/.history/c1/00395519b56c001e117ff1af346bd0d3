@@ -1,0 +1,37 @@
+package btn;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Sample07 {
+	public static void main(String[] args) {
+		new Test();
+	}
+}
+
+class Test extends Frame{
+	Test() {
+		super("button");
+		
+		TextField tf1=new TextField();
+		tf1.setBounds(50,50,150,20);
+		add(tf1);
+		
+		TextField tf2=new TextField();
+		tf2.setBounds(50,100,150,20);
+		add(tf2);
+		
+		TextField tf3=new TextField();
+		tf3.setBounds(50,150,150,20);
+		add(tf3);
+		
+		setSize(400,400);
+		setLayout(null);
+		setVisible(true);
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+			}
+		});
+	}
+}

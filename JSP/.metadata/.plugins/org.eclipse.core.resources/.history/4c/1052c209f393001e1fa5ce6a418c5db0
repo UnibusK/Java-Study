@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>EL과 JSTL</title>
+	</head>
+	<body>
+		<%
+			String var="java단위";
+			pageContext.setAttribute("page", "페이지 단위");
+			request.setAttribute("request", "리퀘스트 단위");
+			session.setAttrivute("session", "세션 단위");
+		%>
+	
+	</body>
+</html>

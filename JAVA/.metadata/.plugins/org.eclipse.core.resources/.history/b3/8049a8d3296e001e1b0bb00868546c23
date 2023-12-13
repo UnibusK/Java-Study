@@ -1,0 +1,28 @@
+package trycatch;
+
+import java.util.*;
+
+public class Sample02 {
+	public static void main(String[] args) {
+		/*
+	  	int[] arr = new int[3];
+		arr[0] = 0;
+		arr[1] = 10;
+		arr[2] = 20;
+		try {
+			for(int i =0; i<4; i++) { //arr.length를 상수로 변경했을때 오류가 발생하고 프로그램이 정지함, 오류가 발생하는 위치에 try-catch
+				System.out.println("배열 내부 데이터 확인중");
+				System.out.println(arr[i]);
+				System.out.println("배열 내부 데이터 "+(i+1)+"번째 확인 완료..");
+			}
+		}catch(Exception e) {
+			System.out.println("배열 내부 확인 중 오류 발생");
+		}
+		System.out.println("배열내용 확인 완료! 다음내용을 수행합니다.");
+		
+		*/
+		
+		Scanner sc = new Scanner(System.in);
+		
+	}
+}

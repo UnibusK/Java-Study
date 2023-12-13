@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>POST 방식 접근 페이지</title>
+	</head>
+	<body>
+		<h1>post방식으로 호출된 경우 페이지가 실행됩니다.</h1>
+		<h1>post.jsp 파일 입니다.</h1>
+	</body>
+</html>

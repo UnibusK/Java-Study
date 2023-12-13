@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSTL 반복문(for문)</title>
+	</head>
+	<body>
+		<%
+			String[] season={"봄", "여름", "가을", "겨울"};
+			//일반 for문 방식
+			for(int i=0; i<season.length; i++){
+				out.print("<h3 style='color:blue';>"+season[i]+"</h3>");
+			}
+			
+			//향상된 for문(improved for)
+			for(String str:season){
+				%><h3 style='color:red;'><%=str %></h3><%
+			}
+			pageContext.setAttribute("arr",season);
+		%>
+		<!-- varStatus : JSTL forEach가 가동되는 동안 var 변수의 상태를 저장해둔 객체 -->
+		<!-- varStatue.index : 0번부터 length-1까지 존재하는 고유 번호 배열번호-->
+		<!-- varStatue.count : 반복 횟수를 알려주는 필드, 1부터 시작 -->
+		<!-- varStatue.first : 최초의 데이터 인지를 판별, 값은 boolean을 가지고 있음 -->
+		<!-- varStatue.last : 최후의 데이터 인지를 판별, 값은 boolean을 갖고 있음 -->
+		<c:forEach var="str" items="${arr }" varStatus="iter">
+			<c:if test="${iter.first }">
+				<div style="border:10px dotted lightgray; text-aglin:center;">
+			</c:if>
+			<!-- index -->
+			<h3 style='color:navy;'>index : ${str }:${iter.index }</h3>
+			<!-- count --> 
+			<h3 style='color:navy;'>count : ${str }:${iter.count }</h3>
+			<!-- first -->
+			<h3 style='color:navy;'>first : ${str }:${iter.first }</h3>
+			<!-- last -->
+			<h3 style='color:navy;'>last : ${str }:${iter.last }</h3>
+			<c:if test="${iter.last }">
+				</div>
+			</c:if>
+		</c:forEach>
+	</body>
+</html>

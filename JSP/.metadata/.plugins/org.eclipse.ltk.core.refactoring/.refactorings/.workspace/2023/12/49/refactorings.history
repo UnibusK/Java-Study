@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JST32&apos; to &apos;JSP32&apos;" description="Rename resource &apos;JST32&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/JST32" name="JSP32" stamp="1702010340548" updateReferences="true"/>
+</session>

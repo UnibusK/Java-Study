@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>EL과 JSTL</title>
+	</head>
+	<body>
+		<%
+			String var="java단위";
+			pageContext.setAttribute("page", "페이지 단위");
+			request.setAttribute("request", "리퀘스트 단위");
+			session.setAttribute("session", "세션 단위");
+			application.setAttribute("app", "어플리케이션 단위");
+		%>
+		
+		<H1>EL의 단위</H1>
+		\${var } : \${var }
+		\${page } : \${page }
+		\${request } : \${request }
+		\${session } : \${session }
+		\${app } : \${app }
+	
+		<c:set var="page" value="페이지 단위" scope="page"></C:set>
+	</body>
+</html>

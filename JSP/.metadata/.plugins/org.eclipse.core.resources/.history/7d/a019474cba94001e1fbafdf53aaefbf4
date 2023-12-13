@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div id="warp">
+			<form method="get" action="select.jsp">
+				색상을 선택하세요
+				<select name="color">
+					<option>빨강</option>
+					<option>주황</option>
+					<option>노랑</option>
+					<option>초록</option>
+					<option>파랑</option>
+					<option>남색</option>
+					<option>보라</option>
+				</select>
+			</form>
+		</div>
+	
+	</body>
+</html>

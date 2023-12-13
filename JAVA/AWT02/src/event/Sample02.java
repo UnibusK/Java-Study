@@ -1,0 +1,59 @@
+package event;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Sample02 {
+	public static void main(String[] args) {
+		View v = new View();
+	}
+}
+
+class View extends Frame{
+	int number1=0;
+	int number2=0;
+	View (){
+		super("test");
+		
+		TextField tf=new TextField();
+		tf.setBounds(50,50,150,20);
+		add(tf);
+		
+		
+		Button b = new Button("Click");
+		b.setBounds(50,150,60,30);
+		b.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//해당 동작이 촉발된 원인
+				number1++;
+				tf.setText(""+number1);
+			}
+		});
+		add(b);
+		
+		TextField tf2=new TextField();
+		tf2.setBounds(50,100,60,30);
+		add(tf2);
+		
+		Button b2 = new Button("Cal");
+		b2.setBounds(50,250,60,30);
+		b2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				number2++;
+				tf.setText(""+number2);
+			}
+		});
+		add(b2);
+		
+		setSize(400,400);		//화면 사이즈
+		setLayout(null);		//화면배치규칙(무규칙)
+		setVisible(true);		//화면 보이게
+		
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+				//System.out.println("X버튼이 눌렸습니다.");
+			}
+		});
+	}
+}

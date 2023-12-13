@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IF문</title>
+	</head>
+	<body>
+		<%
+			if(true){
+				out.print("<h1 style='color:red;'>빨강</h1>");
+			}
+			String tag="";
+			if(true){
+				tag="<h1 style='color:orange;'>빨강</h1>";
+			}
+		%>
+		<%=tag %>
+		<%
+			if(true){	
+		%>		
+				<h1 style="color:yellow;">빨강</h1>
+		<%
+			}
+		%>
+		<!-- 주석을 달아봅니다. F12에 표시 됩니다. -->
+		<c:if test="true">
+			<!-- test뒤에는 조건이 나와요 -->
+			<h1 style="color:green;">빨강</h1>
+		</c:if>
+	</body>
+</html>

@@ -1,0 +1,152 @@
+package label;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class ex_cal {
+	public static void main(String[] args) {
+		new CAL();
+	}
+}
+
+class CAL extends Frame{
+	CAL() {
+		setTitle("Calulator");	//제목
+		
+		Label L=new Label("Calulator");
+		
+		
+		Button b1=new Button("1");
+		b1.setBounds(50,50,30,30);
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("1");
+			}
+		});
+		add(b1);
+		
+		Button b2=new Button("2");
+		b2.setBounds(100,50,30,30);
+		b2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("2");
+			}
+		});
+		add(b2);
+		
+		Button b3=new Button("3");
+		b3.setBounds(150,50,30,30);
+		b3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("3");
+			}
+		});
+		add(b3);
+		
+		Button b4=new Button("4");
+		b4.setBounds(50,100,30,30);
+		b4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("4");
+			}
+		});
+		
+		add(b4);
+		
+		Button b5=new Button("5");
+		b5.setBounds(100,100,30,30);
+		b5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("5");
+			}
+		});
+		add(b5);
+		
+		Button b6=new Button("6");
+		b6.setBounds(150,100,30,30);
+		b6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("6");
+			}
+		});
+		add(b6);
+		
+		Button b7=new Button("7");
+		b7.setBounds(50,150,30,30);
+		b7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("7");
+			}
+		});
+		
+		add(b7);
+		
+		Button b8=new Button("8");
+		b8.setBounds(100,150,30,30);
+		b8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("8");
+			}
+		});
+		add(b8);
+		
+		Button b9=new Button("9");
+		b9.setBounds(150,150,30,30);
+		b9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("9");
+			}
+		});
+		add(b9);
+		
+		Button b0=new Button("0");
+		b0.setBounds(50,200,30,30);
+		b0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("0");
+			}
+		});
+		add(b0);
+		
+		
+		Button plus=new Button("+");
+		plus.setBounds(100,200,30,30);
+		plus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("+");
+			}
+		});
+		add(plus);
+
+		Button minus=new Button("-");
+		minus.setBounds(150,200,30,30);
+		minus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("-");
+			}
+		});
+		add(minus);
+		
+		TextField tf1=new TextField();
+		tf1.setBounds(50, 250, 150,30);
+		add(tf1);
+		
+		tf1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String s = tf1.getText();
+			}
+		});
+
+		
+		setSize(400,400);	//창 크기
+		setLayout(null);	//화면배치 규칙을 무규칙으로
+		setVisible(true); 	//창이 보이도록
+		
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+				System.out.println("종료버튼 눌렸음");
+			}
+		});
+	}
+}

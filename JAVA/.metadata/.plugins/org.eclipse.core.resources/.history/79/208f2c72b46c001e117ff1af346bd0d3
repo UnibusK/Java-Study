@@ -1,0 +1,24 @@
+package btn;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Sample07 {
+	public static void main(String[] args) {
+		new Test();
+	}
+}
+
+class Test extends Frame{
+	Test() {
+		super("button");
+		setSize(400,400);
+		setLayout(null);
+		setVisible(true);
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				dispose();
+			}
+		});
+	}
+}

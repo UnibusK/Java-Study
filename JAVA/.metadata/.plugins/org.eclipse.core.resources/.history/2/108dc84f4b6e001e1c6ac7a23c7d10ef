@@ -1,0 +1,14 @@
+package str;
+
+import java.io.*;
+
+public class Sample04 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("문자열을 입력해주세요.");
+		String msg=br.readLine() ;
+		System.out.println(msg);
+	}
+}
+
+//StringBuffer : 글자를 추가하거나 더해도 원본을 유지해주는 데이터

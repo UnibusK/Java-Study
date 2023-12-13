@@ -1,0 +1,14 @@
+package trychatch;
+
+public class Sample02 {
+	public static void main(String[] args) {
+		int[] arr = new int[3];
+		arr[0] = 0;
+		arr[1] = 10;
+		arr[2] = 20;
+		for(int i =0; i<arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		System.out.println("배열 내용 확인 완료! 다음내용을 수행합니다.");
+	}
+}

@@ -1,0 +1,24 @@
+package getset;
+
+public class Sample03 {
+	public static void main(String[] args) {
+		//Animal a = new Animal();
+		Animal a = new Dog();
+		System.out.println(a);
+	}
+}
+
+abstract class Animal {
+	abstract void move();
+	abstract void eat();
+}
+
+//추상클래스가 추상메서드를 가진 경우 이를 상속받은 일반클래스는 추상메서드의 몸통을 구현해야한다.
+class Dog extends Animal {
+	void move() {
+		System.out.println("네발");
+	}
+	void eat() {
+		System.out.println("사료");
+	}
+}

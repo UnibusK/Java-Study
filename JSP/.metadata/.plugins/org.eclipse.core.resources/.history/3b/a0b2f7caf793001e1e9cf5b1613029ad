@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>EL과 JSTL</title>
+	</head>
+	<body>
+		<%
+			String var="java단위";								//Scope 지정없는 Java 데이터
+			pageContext.setAttribute("page", "페이지 단위");		//PageScope 지정
+			request.setAttribute("request", "리퀘스트 단위");		//RequestScope 지정
+			session.setAttribute("session", "세션 단위");			//SessionScope지정
+			application.setAttribute("app", "어플리케이션 단위");	//ApplicationScope지정
+		%>
+		
+		<H1>EL의 단위</H1>
+		\${var } : ${var }<br>	<!-- 자바의 일반 변수는 Scope지정이 되지 않으면 EL로 참조 불가 -->
+		\${page } : ${page }<br>
+		\${request } : ${request }<br>
+		\${session } : ${session }<br>
+		\${app } : ${app }<br>
+	
+		<c:set var="page" value="페이지 단위2" scope="page"></c:set>
+		<c:set var="request" value="리퀘스트 단위2" scope="request"><c/set>
+		<h1>JSTL의 출력</h1>
+		<c:out value="${page }"></c:out><br>
+	</body>
+</html>

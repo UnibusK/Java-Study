@@ -1,0 +1,70 @@
+package getset;
+
+public class Sample03 {
+	public static void main(String[] args) {
+		//Animal a = new Animal();
+		Animal a = new Dog();
+		Animal p = new Penguin();
+		Animal[] b=new Animal[5];
+		b[0]=new Dog();
+		b[1]=new Cat();
+		b[2]=new Penguin();
+		b[3]=new Cat("네발 귀엽게 걷습니다.", "잡식");
+		b[4]=new Dog();
+		for (int i=0; i<b.length; i++) {
+			b[i].move();
+		}
+	}
+}
+
+abstract class Animal {
+	abstract void move();
+	abstract void eat();
+}
+
+//추상클래스가 추상메서드를 가진 경우 이를 상속받은 일반클래스는 추상메서드의 몸통을 구현해야한다.
+class Dog extends Animal {
+	void move() {
+		System.out.println("네발로 뜁니다.");
+	}
+	void eat() {
+		System.out.println("잡식입니다.");
+	}
+	
+}
+
+abstract class Bird extends Animal{
+	abstract void move();
+	void eat() {
+		System.out.println("부리로 잡식합니다.");
+	}
+}
+
+class Penguin extends Bird {
+	void move() {
+		System.out.println("두발로 뒤뚱뒤뚱 걷습니다.");
+	}
+}
+
+class Cat extends Animal {
+	String move;
+	String eat;
+	Cat(){
+		
+	}
+	void move() {
+		System.out.println("네발로 뜁니다.");
+	}
+	void eat() {
+		System.out.println(eat);
+	}
+	Cat(String a, String b) {
+		move =a;
+		eat =b;
+	}
+	public String toStirng(String a, String b) {
+		move = a;
+		eat = b;
+		return move+", "+ eat ;
+	}
+}

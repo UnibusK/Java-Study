@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if문 받기(선택색상 구별)</title>
+	</head>
+	<body>
+		<p>일반 자바방식</p>
+		<%
+			request.setCharacterEncoding("utf-8");
+		
+			String color=request.getParameter("color");
+			int num=Integer.parseInt(color); 			//숫자로변환
+			
+			if(num==1){
+		%>
+				out.print("<p style='color=red;'></p>");
+		<%
+			} else if(num==2){
+		%>
+				<%= "<p style='color=orange;'></p>" %>
+		<%
+			}
+		%>
+	</body>
+</html>

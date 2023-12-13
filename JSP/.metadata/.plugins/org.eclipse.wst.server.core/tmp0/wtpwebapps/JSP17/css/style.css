@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+#wrap{
+	border: 10px solid green;
+	margin: 0 auto;
+	width: 500px;
+}
+#header{
+	background-color: lightgreen;
+	padding:15px;
+}
+#header h1{
+
+}
+
+#header ul{
+	list-style: none;
+	width:400px;
+	margin:0 aute;
+}
+
+#header ul li{
+	width: 80px;
+	float:left;
+	text-align:center;
+	background-color: yellowgreen;
+	font-weight: bold;
+	color:white;
+	padding:10px;
+}
+
+#header ul:after{
+	content:"";
+	display:block;
+	clear:both;
+}
